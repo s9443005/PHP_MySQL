@@ -68,36 +68,36 @@
 * 如果你在做專題，建立表格後一定要將SQL語法存起來備用。
 ```
     <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "myDB";
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "myDB";
 
-    // 建立連線
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    // 檢查連線
-    if ($conn->connect_error) {
-      die("<p>連線失敗</p>" . $conn->connect_error);
-    }
+        // 建立連線
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        // 檢查連線
+        if ($conn->connect_error) {
+          die("<p>連線失敗" . date("Y-m-d H;i:s") . "</p>" . $conn->connect_error);
+        }
 
-    // 以SQL新增表格
-    $sql = "CREATE TABLE MyGuests (
-    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    firstname VARCHAR(30) NOT NULL,
-    lastname VARCHAR(30) NOT NULL,
-    email VARCHAR(50),
-    reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-    )";
+        // 以SQL新增表格
+        $sql = "CREATE TABLE MyGuests (
+        id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+        firstname VARCHAR(30) NOT NULL,
+        lastname VARCHAR(30) NOT NULL,
+        email VARCHAR(50),
+        reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+        )";
 
-    if ($conn->query($sql) === TRUE) {
-      echo "<p>表格MyGuests新增成功</p>";
-    } else {
-      echo "<p>表格MyGuests新增失敗</p>" . $conn->error;
-    }
-    // 結束連線
-    $conn->close();
-    echo "<p>結束連線</p>";
-    ?>
+        if ($conn->query($sql) === TRUE) {
+          echo "<p>表格MyGuests新增成功" . date("Y-m-d H;i:s") . "</p>";
+        } else {
+          echo "<p>表格MyGuests新增失敗" . date("Y-m-d H;i:s") . "</p>" . $conn->error;
+        }
+        // 結束連線
+        $conn->close();
+        echo "<p>結束連線" . date("Y-m-d H;i:s") . "<p>";
+        ?>
 ```
 
 ### 【範例】以PHP新增記錄
