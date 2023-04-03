@@ -13,10 +13,29 @@
 
 ## 學習範例
 
-### 連接資料庫
-* w3schools [PHP Connect to MySQL 連接MySQL資料庫](https://www.w3schools.com/php/php_mysql_connect.asp) 
-* [ex002.php](https://www.w3schools.com/php/php_mysql_create.asp) 新增資料庫
-* [ex003.php](https://www.w3schools.com/php/php_mysql_create_table.asp) 新增表格
-* [ex004.php](https://www.w3schools.com/php/php_mysql_insert.asp) 新增記錄
-* [ex005.php](https://www.w3schools.com/php/php_mysql_insert_multiple.asp) 新增多筆
-* [ex006.php](https://www.w3schools.com/php/php_mysql_prepared_statements.asp) 新增記錄
+### 【範例】連接MySQL伺服器
+* 參考w3schools範例[PHP Connect to MySQL 連接MySQL伺服器](https://www.w3schools.com/php/php_mysql_connect.asp)
+```
+```
+
+### 【範例】建立MySQL資料庫
+* 參考w3schools範例[PHP Create a MySQL Database 建立MySQL資料庫](https://www.w3schools.com/php/php_mysql_create.asp)
+``````
+
+### 【範例】以PHP新增表格
+* 參考w3schools範例[PHP MySQL Create Table 以PHP新增表格](https://www.w3schools.com/php/php_mysql_create_table.asp)
+```
+```
+
+### 【範例】以PHP新增記錄
+* 參考w3schools範例[PHP MySQL Insert Data 以PHP新增記錄](https://www.w3schools.com/php/php_mysql_insert.asp) 
+```
+```
+
+### 【範例】以PHP新增多筆記錄
+* 參考w3schools範例[PHP MySQL Insert Multiple Records 新增多筆記錄](https://www.w3schools.com/php/php_mysql_insert_multiple.asp) 
+```
+```
+
+### 【範例】以PHP新增多筆記錄
+* 參考w3schools範例[ex006.php](https://www.w3schools.com/php/php_mysql_prepared_statements.asp) 新增記錄
