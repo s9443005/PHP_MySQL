@@ -16,6 +16,20 @@
 ### 【範例】連接MySQL伺服器
 * 參考w3schools範例[PHP Connect to MySQL 連接MySQL伺服器](https://www.w3schools.com/php/php_mysql_connect.asp)
 ```
+    <?php
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+
+    // 建立連線
+    $conn = new mysqli($servername, $username, $password);
+
+    // 檢查連線
+    if ($conn->connect_error) {
+      die("<p>連線失敗</p>" . $conn->connect_error);
+    }
+    echo "<p>連線成功</p>";
+    ?>
 ```
 
 ### 【範例】建立MySQL資料庫
