@@ -103,6 +103,31 @@
 ### 【範例】以PHP新增記錄
 * 參考w3schools範例[PHP MySQL Insert Data 以PHP新增記錄](https://www.w3schools.com/php/php_mysql_insert.asp) 
 ```
+    <?php
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "myDB";
+
+    // 建立連線
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    // 檢查連線
+    if ($conn->connect_error) {
+        die("<p>連線失敗" . date("Y-m-d H;i:s") . "</p>" . $conn->connect_error);
+    }
+
+    $sql = "INSERT INTO MyGuests (firstname, lastname, email)
+    VALUES ('John', 'Doe', 'john@example.com')";
+
+    if ($conn->query($sql) === TRUE) {
+      echo "<p>新記錄新增成功" . date("Y-m-d H;i:s") . "</p>";
+    } else {
+      echo "<p>錯誤： " . $sql . date("Y-m-d H;i:s") .  "</p>" . $conn->error ;
+    }
+    // 結束連線
+    $conn->close();
+    echo "<p>結束連線" . date("Y-m-d H;i:s") . "<p>";
+    ?>
 ```
 
 ### 【範例】以PHP新增多筆記錄
