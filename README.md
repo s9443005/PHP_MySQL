@@ -65,6 +65,7 @@
 
 ### 【範例】以PHP新增表格
 * 參考w3schools範例[PHP MySQL Create Table 以PHP新增表格](https://www.w3schools.com/php/php_mysql_create_table.asp)
+* 這個程式無法被重復執行，會發生 **表格名稱重覆** 的錯誤；想要重覆行執要先刪除原table。
 * 如果你在做專題，通常建立你專題的資料庫表格，應該在 phpAdmin 裡操作完成，不會寫一支程式的。
 * 如果你在做專題，建立表格後一定要將SQL語法存起來備用。
 ```
