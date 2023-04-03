@@ -34,6 +34,7 @@
 
 ### 【範例】建立MySQL資料庫
 * 參考w3schools範例[PHP Create a MySQL Database 建立MySQL資料庫](https://www.w3schools.com/php/php_mysql_create.asp)
+* 這個程式無法被重復執行，會發生 **資料庫名字重覆** 的錯誤；想要重覆行執要先刪除myDB。
 * 如果你在做專題，通常建立你專題的資料庫，應該在 phpAdmin 裡操作完成，不會寫一支程式的。
 ```
     <?php
