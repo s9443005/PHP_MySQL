@@ -23,7 +23,7 @@
 
     // 建立連線
     $conn = new mysqli($servername, $username, $password);
-
+檢查連線
     // 檢查連線
     if ($conn->connect_error) {
       die("<p>連線失敗</p>" . $conn->connect_error);
@@ -34,7 +34,32 @@
 
 ### 【範例】建立MySQL資料庫
 * 參考w3schools範例[PHP Create a MySQL Database 建立MySQL資料庫](https://www.w3schools.com/php/php_mysql_create.asp)
-``````
+```
+    <?php
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+
+    // 建立連線
+    $conn = new mysqli($servername, $username, $password);
+    // 檢查連線
+    if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+    }
+
+    // 建立資料庫
+    $sql = "CREATE DATABASE myDB";
+    if ($conn->query($sql) === TRUE) {
+      echo "<p>成功建立資料庫</p>";
+    } else {
+      echo "<p>失敗建立資料庫</p>" . $conn->error;
+    }
+
+    // 結束連線
+    $conn->close();
+    echo "<p>結束連線</p>";
+    ?>
+```
 
 ### 【範例】以PHP新增表格
 * 參考w3schools範例[PHP MySQL Create Table 以PHP新增表格](https://www.w3schools.com/php/php_mysql_create_table.asp)
