@@ -79,7 +79,7 @@
     $conn = new mysqli($servername, $username, $password, $dbname);
     // 檢查連線
     if ($conn->connect_error) {
-      die("<p>連線失敗" . date("Y-m-d H;i:s") . "</p>" . $conn->connect_error);
+      die("<p>連線失敗" . date("Y-m-d H:i:s") . "</p>" . $conn->connect_error);
     }
 
     // 以SQL新增表格
@@ -92,13 +92,13 @@
     )";
 
     if ($conn->query($sql) === TRUE) {
-      echo "<p>表格MyGuests新增成功" . date("Y-m-d H;i:s") . "</p>";
+      echo "<p>表格MyGuests新增成功" . date("Y-m-d H:i:s") . "</p>";
     } else {
-      echo "<p>表格MyGuests新增失敗" . date("Y-m-d H;i:s") . "</p>" . $conn->error;
+      echo "<p>表格MyGuests新增失敗" . date("Y-m-d H:i:s") . "</p>" . $conn->error;
     }
     // 結束連線
     $conn->close();
-    echo "<p>結束連線" . date("Y-m-d H;i:s") . "<p>";
+    echo "<p>結束連線" . date("Y-m-d H:i:s") . "<p>";
     ?>
 ```
 
@@ -115,20 +115,20 @@
     $conn = new mysqli($servername, $username, $password, $dbname);
     // 檢查連線
     if ($conn->connect_error) {
-        die("<p>連線失敗" . date("Y-m-d H;i:s") . "</p>" . $conn->connect_error);
+        die("<p>連線失敗" . date("Y-m-d H:i:s") . "</p>" . $conn->connect_error);
     }
 
     $sql = "INSERT INTO MyGuests (firstname, lastname, email)
     VALUES ('John', 'Doe', 'john@example.com')";
 
     if ($conn->query($sql) === TRUE) {
-      echo "<p>新記錄新增成功" . date("Y-m-d H;i:s") . "</p>";
+      echo "<p>新記錄新增成功" . date("Y-m-d H:i:s") . "</p>";
     } else {
-      echo "<p>錯誤： " . $sql . date("Y-m-d H;i:s") .  "</p>" . $conn->error ;
+      echo "<p>錯誤： " . $sql . date("Y-m-d H:i:s") .  "</p>" . $conn->error ;
     }
     // 結束連線
     $conn->close();
-    echo "<p>結束連線" . date("Y-m-d H;i:s") . "<p>";
+    echo "<p>結束連線" . date("Y-m-d H:i:s") . "<p>";
     ?>
 ```
 
@@ -145,7 +145,7 @@
     $conn = new mysqli($servername, $username, $password, $dbname);
     // 檢查連線
     if ($conn->connect_error) {
-        die("<p>連線失敗" . date("Y-m-d H;i:s") . "</p>" . $conn->connect_error);
+        die("<p>連線失敗" . date("Y-m-d H:i:s") . "</p>" . $conn->connect_error);
     }
 
     $sql = "INSERT INTO MyGuests (firstname, lastname, email)
@@ -158,13 +158,13 @@
     VALUES ('四', '李', 'Lee4@example.com')";
 
     if ($conn->multi_query($sql) === TRUE) {
-        echo "<p>多筆新記錄新增成功" . date("Y-m-d H;i:s") . "</p>";
+        echo "<p>多筆新記錄新增成功" . date("Y-m-d H:i:s") . "</p>";
     } else {
-        echo "<p>錯誤： " . $sql . date("Y-m-d H;i:s") .  "</p>" . $conn->error ;
+        echo "<p>錯誤： " . $sql . date("Y-m-d H:i:s") .  "</p>" . $conn->error ;
     }
     // 結束連線
     $conn->close();
-    echo "<p>結束連線" . date("Y-m-d H;i:s") . "<p>";
+    echo "<p>結束連線" . date("Y-m-d H:i:s") . "<p>";
     ?>
 ```
 
