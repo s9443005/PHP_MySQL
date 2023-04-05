@@ -135,6 +135,37 @@
 ### 【範例】以PHP新增多筆記錄
 * 參考w3schools範例[PHP MySQL Insert Multiple Records 新增多筆記錄](https://www.w3schools.com/php/php_mysql_insert_multiple.asp) 
 ```
+    <?php
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "myDB";
+
+    // 建立連線
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    // 檢查連線
+    if ($conn->connect_error) {
+        die("<p>連線失敗" . date("Y-m-d H;i:s") . "</p>" . $conn->connect_error);
+    }
+
+    $sql = "INSERT INTO MyGuests (firstname, lastname, email)
+    VALUES ('John', 'Smith', 'johnsmith@example.com');";
+    $sql .= "INSERT INTO MyGuests (firstname, lastname, email)
+    VALUES ('Jane', 'Doe', 'janedoe@example.com');";
+    $sql .= "INSERT INTO MyGuests (firstname, lastname, email)
+    VALUES ('三', '張', 'chang3@example.com');";
+    $sql .= "INSERT INTO MyGuests (firstname, lastname, email)
+    VALUES ('四', '李', 'Lee4@example.com')";
+
+    if ($conn->multi_query($sql) === TRUE) {
+        echo "<p>多筆新記錄新增成功" . date("Y-m-d H;i:s") . "</p>";
+    } else {
+        echo "<p>錯誤： " . $sql . date("Y-m-d H;i:s") .  "</p>" . $conn->error ;
+    }
+    // 結束連線
+    $conn->close();
+    echo "<p>結束連線" . date("Y-m-d H;i:s") . "<p>";
+    ?>
 ```
 
 ### 【範例】以PHP新增多筆記錄
