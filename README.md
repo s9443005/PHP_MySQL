@@ -168,5 +168,30 @@
     ?>
 ```
 
-### 【範例】以PHP新增多筆記錄
-* 參考w3schools範例[ex006.php](https://www.w3schools.com/php/php_mysql_prepared_statements.asp) 新增記錄
+### 【範例】從 HTML 表單傳送到 PHP。
+* 參考w3schools範例[PHP - A Simple HTML Form 最基礎HTML表單](https://www.w3schools.com/php/php_forms.asp)
+* 這個範例在 .html 裡建立一個 Form，將姓名及EMAIL傳給 welcome.php，瀏覽器顯示之
+```
+    <! .html檔>
+    <html>
+        <head><meta charset="utf-8"></head>
+        <body>
+            <form action="welcome.php" method="post">
+            姓名：<input type="text" name="name"><br>
+            電子郵件：<input type="text" name="email"><br>
+            <input type="submit">
+            </form>
+        </body>
+    </html>
+```
+```
+    <! welcom.php檔>
+    <html>
+        <head><meta charset="utf-8"></head>
+        <body>
+            <p>您好！歡迎<?php echo $_POST["name"]; ?></p>
+            <p>您的電子郵件為：<?php echo $_POST["email"]; ?></p>
+            <p>本範例從 HTML 的 FORM 接收2個變數。</p>
+        </body>
+    </html>
+```
