@@ -202,3 +202,66 @@ welcome.php內容如下：
         </body>
     </html>
 ```
+
+### 【範例】從 HTML 表單和 PHP 合併成一支程式
+* 參考w3schools範例[PHP Form Validation 表單驗證](https://www.w3schools.com/php/php_forms.asp)
+* 上一支程式的延伸，是必須懂的2支基本程式
+```
+    <!DOCTYPE HTML>  
+    <html>
+    <head><meta charset="utf-8"></head>
+    <body>  
+    <?php
+    // 定義及起始變數
+    $name = $email = $gender = $comment = $website = "";
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      $name = test_input($_POST["name"]);
+      $email = test_input($_POST["email"]);
+      $website = test_input($_POST["website"]);
+      $comment = test_input($_POST["comment"]);
+      $gender = test_input($_POST["gender"]);
+    }
+
+    function test_input($data) {
+      $data = trim($data);
+      $data = stripslashes($data);
+      $data = htmlspecialchars($data);
+      return $data;
+    }
+    ?>
+
+    <h2>PHP 表單驗證範例</h2>
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+      姓名: <input type="text" name="name">
+      <br><br>
+      E-mail: <input type="text" name="email">
+      <br><br>
+      網站: <input type="text" name="website">
+      <br><br>
+      評論: <textarea name="comment" rows="5" cols="40"></textarea>
+      <br><br>
+      性別:
+      <input type="radio" name="gender" value="female">Female
+      <input type="radio" name="gender" value="male">Male
+      <input type="radio" name="gender" value="other">Other
+      <br><br>
+      <input type="submit" name="submit" value="Submit">  
+    </form>
+
+    <?php
+    echo "<h2>您的輸入:</h2>";
+    echo $name;
+    echo "<br>";
+    echo $email;
+    echo "<br>";
+    echo $website;
+    echo "<br>";
+    echo $comment;
+    echo "<br>";
+    echo $gender;
+    ?>
+
+    </body>
+    </html>
+```
