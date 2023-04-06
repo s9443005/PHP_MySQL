@@ -308,29 +308,21 @@ welcome.php內容如下：
 
 * 以上輸出結果，到 mysql> 命令列介面(Command Line Interface)去下指令驗證
 ```
-C:\xampp\mysql\bin>mysql -u root -p
-Enter password:
-Welcome to the MariaDB monitor.  Commands end with ; or \g.
-Your MariaDB connection id is 11
-Server version: 10.4.27-MariaDB mariadb.org binary distribution
+    C:\xampp\mysql\bin>mysql -u root -p
+                ...中間略
+    MariaDB [(none)]> use myDB
+    Database changed
+    MariaDB [myDB]> select * from myguests;
+    +----+-----------+----------+-----------------------+---------------------+
+    | id | firstname | lastname | email                 | reg_date            |
+    +----+-----------+----------+-----------------------+---------------------+
+    |  1 | John      | Doe      | john@example.com      | 2023-04-04 01:00:51 |
+    |  2 | John      | Doe      | john@example.com      | 2023-04-04 01:00:57 |
+                ...中間略
+    | 39 | 四        | 李       | Lee4@example.com      | 2023-04-05 19:28:02 |
+    | 40 | John      | Doe      | john@example.com      | 2023-04-06 16:20:11 |
+    +----+-----------+----------+-----------------------+---------------------+
+    40 rows in set (0.007 sec)
 
-Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
-
-Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
-
-MariaDB [(none)]> use myDB
-Database changed
-MariaDB [myDB]> select * from myguests;
-+----+-----------+----------+-----------------------+---------------------+
-| id | firstname | lastname | email                 | reg_date            |
-+----+-----------+----------+-----------------------+---------------------+
-|  1 | John      | Doe      | john@example.com      | 2023-04-04 01:00:51 |
-|  2 | John      | Doe      | john@example.com      | 2023-04-04 01:00:57 |
-            ...中間略
-| 39 | 四        | 李       | Lee4@example.com      | 2023-04-05 19:28:02 |
-| 40 | John      | Doe      | john@example.com      | 2023-04-06 16:20:11 |
-+----+-----------+----------+-----------------------+---------------------+
-40 rows in set (0.007 sec)
-
-MariaDB [myDB]>
+    MariaDB [myDB]>
 ```
