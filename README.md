@@ -205,7 +205,7 @@ welcome.php內容如下：
 
 ### 【範例】從 HTML 表單和 PHP 合併成一支程式
 * 參考w3schools範例[PHP Form Validation 表單驗證](https://www.w3schools.com/php/php_forms.asp)
-* 上一支程式的延伸，是必須懂的2支基本程式
+* 上一支程式[【範例】從 HTML 表單傳送到 PHP](https://github.com/s9443005/PHP_MySQL#%E7%AF%84%E4%BE%8B%E5%BE%9E-html-%E8%A1%A8%E5%96%AE%E5%82%B3%E9%80%81%E5%88%B0-php)的延伸，是必須懂的2支基本程式
 ```
     <!DOCTYPE HTML>  
     <html>
