@@ -265,3 +265,44 @@ welcome.php內容如下：
     </body>
     </html>
 ```
+### 【範例】以SQL指令查詢資料庫
+* 參考w3schools範例[PHP MySQL Select Data 用SQL指令查詢](https://www.w3schools.com/php/php_mysql_select.asp)
+* 請連續學習下一支程式[【範例】]
+```
+    <!DOCTYPE html>
+    <html>
+    <body>
+
+    <?php
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "myDB";
+
+        // 建立連線
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        // 檢查連線
+        if ($conn->connect_error) {
+            die("<p>連線失敗" . date("Y-m-d H:i:s") . "</p>" . $conn->connect_error);
+        }
+
+        //$sql = "SELECT id, firstname, lastname FROM MyGuests";
+        $sql = "SELECT id, firstname, lastname FROM MyGuests where firstname='John'";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            // 輸出每一筆資料(Record或Row)的欄位(Column或Field)
+            while($row = $result->fetch_assoc()) {
+                echo "<br> id: ". $row["id"]. " - Name: ". $row["firstname"]. " " . $row["lastname"] . "<br>";
+            }
+            echo "<p>輸出查詢" . date("Y-m-d H:i:s") . "<p>";
+        } else {
+            echo "0 results";
+        }
+        // 結束連線
+        $conn->close();
+        echo "<p>結束連線" . date("Y-m-d H:i:s") . "<p>";
+    ?>
+    </body>
+    </html>
+```
