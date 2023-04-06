@@ -171,7 +171,7 @@
 ### 【範例】從 HTML 表單傳送到 PHP。
 * 參考w3schools範例[PHP - A Simple HTML Form 最基礎HTML表單](https://www.w3schools.com/php/php_forms.asp)
 * 這個範例在 .html 裡建立一個 Form，將姓名及EMAIL傳給 welcome.php，瀏覽器顯示姓名及email
-* 這是一個重要的範例，建立 HTML 及 PHP 的橋樑
+* 這是一個重要的範例，建立 HTML 及 PHP 的橋樑，請連續學習下一支程式[【範例】從 HTML 表單和 PHP 合併成一支程式](https://github.com/s9443005/PHP_MySQL#%E7%AF%84%E4%BE%8B%E5%BE%9E-html-%E8%A1%A8%E5%96%AE%E5%92%8C-php-%E5%90%88%E4%BD%B5%E6%88%90%E4%B8%80%E6%94%AF%E7%A8%8B%E5%BC%8F)
 
 HTML檔如下，可以任意命名：
 
